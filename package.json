@@ -1,10 +1,10 @@
 {
-  "id": "cordova-plugin-open-smsapp",
-  "name": "cordova-plugin-open-smsapp",
+  "id": "cordova-plugin-opensmsapp",
+  "name": "cordova-plugin-opensmsapp",
   "version": "1.0.0",
   "description": "Cordova Open SMSApp Plugin",
   "cordova": {
-    "id": "cordova-plugin-open-smsapp",
+    "id": "cordova-plugin-opensmsapp",
     "platforms": [
       "android"
     ]
