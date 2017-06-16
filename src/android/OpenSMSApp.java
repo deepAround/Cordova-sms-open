@@ -18,8 +18,6 @@ public class OpenSMSApp extends CordovaPlugin {
 
 	private static final String LOG_TAG = "OpenSMSApp";
 	private static volatile Activity currentActivity;
-	private SessionCallback callback;
-
 	/**
 	 * Initialize cordova plugin kakaotalk
 	 * @param cordova
@@ -42,8 +40,6 @@ public class OpenSMSApp extends CordovaPlugin {
 	{
 		Log.v(LOG_TAG, "OpenSMSApp : execute " + action);
 		cordova.setActivityResultCallback(this);
-		callback = new SessionCallback(callbackContext);
-		Session.getCurrentSession().addCallback(callback);
 
 		if (action.equals("share")) {
 
@@ -66,7 +62,7 @@ public class OpenSMSApp extends CordovaPlugin {
 			Intent retunIntent = new Intent(Intent.ACTION_VIEW);
 			retunIntent.putExtra("sms_body", parameters.getString("sms_body"));
 			retunIntent.setType("vnd.android-dir/mms-sms");
-			startActivity(retunIntent);
+			this.cordova.getActivity().startActivity(retunIntent);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
