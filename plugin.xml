@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+   id="cordova-plugin-htj-kakaotalk"
+   name="cordova-plugin-htj-kakaotalk"
+   version="1.0.0">
+
+    <name>Open SMSApp</name>
+    <description>Open SMSApp Cordova Plugin</description>
+
+	<engines>
+		<engine name="cordova-android" version=">3.9.9" /><!-- Requires Gradle building -->
+	</engines>
+
+    <js-module name="OpenSMSApp" src="www/OpenSMSApp.js">
+    	<clobbers target="OpenSMSApp" />
+    </js-module>
+
+	<platform name="android">
+		<source-file src="src/android/OpenSMSApp.java" target-dir="src/com/deepAround/opensmsapp" />
+    </platform>
+    
+</plugin>

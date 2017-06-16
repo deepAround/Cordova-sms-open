@@ -1,0 +1,23 @@
+{
+  "id": "cordova-plugin-open-smsapp",
+  "name": "cordova-plugin-open-smsapp",
+  "version": "1.0.0",
+  "description": "Cordova Open SMSApp Plugin",
+  "cordova": {
+    "id": "cordova-plugin-open-smsapp",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [
+    "cordova",
+    "sms",
+    "cordova-android"
+  ],
+  "author": "June PARK",
+  "license": "MIT"
+}
