@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-   xmlns:android="http://schemas.android.com/apk/res/android"
-   id="cordova-plugin-opensmsapp"
-   version="1.0.0">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-plugin-opensmsapp"
+	version="1.0.0">
 
-    <name>Open SMSApp</name>
-    <description>Open SMSApp Cordova Plugin</description>
+	<name>Open SMSApp</name>
+	<description>Open SMSApp Cordova Plugin</description>
 
 	<engines>
 		<engine name="cordova-android" version=">3.9.9" /><!-- Requires Gradle building -->
 	</engines>
 
-    <js-module name="OpenSMSApp" src="www/OpenSMSApp.js">
-    	<clobbers target="OpenSMSApp" />
-    </js-module>
+	<js-module name="OpenSMSApp" src="www/OpenSMSApp.js">
+		<clobbers target="OpenSMSApp" />
+	</js-module>
 
 	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="OpenSMSApp">
+				<param name="android-package" value="com.deepAround.opensmsapp.OpenSMSApp" />
+			</feature>
+		</config-file>
 		<source-file src="src/android/OpenSMSApp.java" target-dir="src/com/deepAround/opensmsapp" />
-    </platform>
+	</platform>
     
 </plugin>
